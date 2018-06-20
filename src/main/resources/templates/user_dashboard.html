@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Krib | Dashboard</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/bootstrap.css" type="text/css" rel="stylesheet" /> 
+        <script src="js/jquery.js"></script> 
+        <script src="js/bootstrap.js"></script> 
+        <style>
+            .well{
+                background: transparent;
+            }
+
+            .available-houses-badge{
+                background-color: #449d44; 
+            }
+
+            .average-rating-badge{
+                background-color: #f0ad4e; 
+            }
+
+            .fieldLoader{
+                width: 25px;
+                margin-left: 40%;
+            }
+
+            .navbar-default{
+                background-color: #025402
+            }
+            
+            .navbar-links{
+                color: #ccc;
+            }
+            
+            .navbar-links:hover{
+                color: white;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target="#collapse-links">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#" style="color: white" class="navbar-brand">Krib</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="collapse-links">
+                <ul class="nav navbar-nav">
+                    <li><a href="#" style="color: white;">Home</a></li>
+                    <li><a href="my_profile.html"><span class="navbar-links">My Profile</span></a></li>
+                    <li><a href="my_reservations.html"><span class="navbar-links">My Reservations</span></a></li>
+                    <li><a href="log_in.html"><span class="navbar-links">Sign Out</span></a></li>
+                </ul>
+                <img alt="profile-pic"  class="img-responsive pull-right" width="50" src="img/avatar.png" /> 
+            </div>
+        </nav>
+
+        <div class="container" style="margin-top: 55px">
+            <div class="row">
+                <div class="col-lg-9">
+                    <div class="row">
+                        <div>
+                            <div class="panel panel-success">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Find a house</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <form method="POST" action="#" role="form">
+                                        <div class="row">
+                                            <div class="col-lg-2">
+                                                <div class="form-group">
+                                                    <select class="form-control" id="city">
+                                                        <option>-- City --</option>
+                                                        <option>Nairobi</option>
+                                                        <option>Mombasa</option>
+                                                        <option>Kisumu</option>
+                                                        <option>Eldoret</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3">
+                                                <div class="form-group">
+                                                    <select class="form-control" id="estate">
+                                                        <option>-- Estate --</option>
+                                                        <option>Umoja</option>
+                                                        <option>Runda</option>
+                                                        <option>Mathare</option>
+                                                        <option>Park Lands</option>
+                                                    </select>
+                                                    <!-- <img class="fieldLoader" src="img/loading36.gif" alt="Loading Estate" class="img-responsive" /> -->
+                                                </div>                                               
+                                            </div>
+                                            <div class="col-lg-3">
+                                                <div class="form-group">
+                                                    <select class="form-control" id="sub-estate">
+                                                        <option>-- Sub-Estate --</option>
+                                                        <option>Umoja 1</option>
+                                                        <option>Runda 1</option>
+                                                        <option>Mathare 1</option>
+                                                        <option>Park Lands 1</option>
+                                                    </select>
+                                                    <!-- <img class="fieldLoader" src="img/loading36.gif" alt="Loading Estate" class="img-responsive" /> -->
+                                                </div> 
+                                            </div>
+                                            <div class="col-lg-3">
+                                                <div class="form-group">
+                                                    <select class="form-control" id="price-range">
+                                                        <option>-- Price Range --</option>
+                                                        <option>Ksh.500 - Ksh.10,000</option>
+                                                        <option>Ksh.10,001 - Ksh.20,000</option>
+                                                        <option>Ksh.20,001 - Ksh.40,000</option>
+                                                        <option>Over Ksh.40,000</option>
+                                                    </select>
+                                                    <!-- <img class="fieldLoader" src="img/loading36.gif" alt="Loading Estate" class="img-responsive" /> -->
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-1"><button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></button></div>
+                                        </div>
+                                        <div class="row" style="margin-left: 1px; margin-right: 1px" >
+                                            <div class="panel panel-success">
+                                                <div class="panel-heading">
+                                                    <div class="panel-title">
+                                                        <div class="checkbox">
+                                                            <label> <input type="checkbox" onclick="toggleAmenities(this)"/>
+                                                                Include Amenities in search
+                                                            </label>
+                                                        </div> 
+                                                    </div> 
+                                                </div>
+                                                <div class="panel-body" id="amenities-panel-body" style="display: none">
+                                                    <div class="row">
+                                                        <div class="col-lg-4">
+                                                            <div class="checkbox">
+                                                                <label><input type="checkbox" /> Swimming Pool</label> 
+                                                            </div> 
+                                                        </div> 
+                                                        <div class="col-lg-4">
+                                                            <div class="checkbox">
+                                                                <label><input type="checkbox" /> Shopping Mall</label> 
+                                                            </div> 
+                                                        </div> 
+                                                        <div class="col-lg-4">
+                                                            <div class="checkbox">
+                                                                <label><input type="checkbox" /> Garage </label> 
+                                                            </div> 
+                                                        </div> 
+                                                    </div> 
+                                                    <script>
+                                                        function toggleAmenities(element) {
+                                                           var amenitiesPanelBody = document.getElementById('amenities-panel-body');
+                                                           if (element.checked === false) {
+                                                                amenitiesPanelBody.style.display = 'none';
+                                                            } else {
+                                                                amenitiesPanelBody.style.display = 'block';
+                                                            }
+                                                        }
+                                                    </script>
+                                                </div>
+                                            </div> 
+                                        </div> 
+                                    </form>
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+
+                    <div class='row'>
+                        <div class="panel panel-success">
+                            <div class="panel-heading">
+                                <h2 class="panel-title"><!--<span>Searching... </span>--><span>Search Results</span>
+                                    <!--<img class="pull-right " style="width: 25px" src="img/loading36.gif" alt="Loading Estate" />--> 
+                                    <span class="pull-right badge"><span class="panel-title">25 Houses</span></span>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div>
+                            <div class="panel panel-success">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Park Lands</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="panel panel-success">
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <div class="col-sm-5 col-md-4 col-lg-3"><img  width="300" src="img/subaru.jpg" class="img-rounded img-thumbnail img-responsive" alt="House" /></div>
+                                                <div class="col-sm-7 col-md-8 col-lg-9">
+                                                    <div class="well">Parklands is a scenic beauty, with all that is needed to create a captivating living
+                                                        experience, look no further! 
+                                                    </div> 
+                                                    <div class="row">
+                                                        <div class="col-xs-3">
+                                                            <span>Available Houses</span>
+                                                        </div>
+                                                        <div class="col-xs-9">
+                                                            <span class="badge available-houses-badge">25</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-xs-3">
+                                                            <a href="apartment_ratings.html?apartment=parklands">Average Rating</a>
+                                                        </div> 
+                                                        <div class="col-xs-9">
+                                                            <span class="badge average-rating-badge">4.5</span>
+                                                        </div> 
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                        </div>
+                                        <div class="panel-footer">
+                                            <a class="btn btn-primary" href="explore.html">Explore &nbsp;<span class="glyphicon glyphicon-eye-open"></span></a>
+                                            <button class="btn btn-danger" type="button">Hide  &nbsp;<span class="glyphicon glyphicon-remove"></span> </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+
+                </div>
+                <div class="col-lg-3">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <label>Sort By : </label>
+                            <select class="form-control">
+                                <option>Featured</option>
+                                <option>Near Me</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <h4>Parklands</h4>
+                            <div><img src="img/subaru.jpg" class="img-rounded img-thumbnail img-responsive" alt="House" /></div> 
+                        </div>
+                        <div class="panel-footer">
+                            <button class="btn btn-default" type="button">Explore</button>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <h4>Parklands</h4>
+                            <div><img src="img/subaru.jpg" class="img-rounded img-thumbnail img-responsive" alt="House" /></div> 
+                        </div>
+                        <div class="panel-footer">
+                            <a class="btn btn-default" href="explore.html">Explore</a>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <h4>Parklands</h4>
+                            <div><img src="img/subaru.jpg" class="img-rounded img-thumbnail img-responsive" alt="House" /></div> 
+                        </div>
+                        <div class="panel-footer">
+                            <button class="btn btn-default" type="button">Explore</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

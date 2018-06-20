@@ -14,12 +14,13 @@ import org.springframework.web.bind.annotation.GetMapping;
  */
 @Controller
 public class KribPagesController {
+
     // this is the page suffix to be used by the user when sending a 
     // request e.g home.hmtl, home.php (meh :-(, haha), home.asp
-    private String pageSuffix = ".html"; 
-    
+    private String pageSuffix = ".html";
+
     @GetMapping
-    public String tenantDashboard(){
-        return "user_dashboard"; 
+    public String tenantDashboard() {
+        return "user_dashboard";
     }
 }

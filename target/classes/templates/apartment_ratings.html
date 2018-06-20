@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Krib | Ratings</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/bootstrap.css" type="text/css" rel="stylesheet" /> 
+        <script src="js/jquery.js"></script> 
+        <script src="js/bootstrap.js"></script> 
+        <style>
+            .navbar-default{
+                background-color: #025402
+            }
+            .navbar-links{
+                color: #ccc;
+            }
+            
+            .navbar-links:hover{
+                color: white;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target="#collapse-links">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#"  style="color: white" class="navbar-brand">Krib</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="collapse-links">
+                <ul class="nav navbar-nav">
+                    <li><a class="navbar-links" href="user_dashboard.html"><span class="navbar-links">Home</span></a></li>
+                    <li><a href="my_profile.html"><span class="navbar-links">My Profile</span></a></li>
+                    <li><a href="my_reservations.html"><span class="navbar-links">My Reservations</span></a></li>
+                    <li><a href="log_in.html"><span class="navbar-links">Sign Out</span></a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container" style="margin-top: 55px">
+            <div class="row">
+                <!-- TODO: place the form to the center of the screen --> 
+                <div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Parklands</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-sm-5 col-md-4 col-lg-3"><img  width="300" src="img/subaru.jpg" class="img-rounded img-thumbnail img-responsive" alt="House" /></div>
+                                <div class="col-sm-7 col-md-8 col-lg-9">
+                                    <div class="well">Parklands is a scenic beauty, with all that is needed to create a captivating living
+                                        experience, look no further! 
+                                    </div> 
+                                    <div class="row">
+                                        <div class="col-xs-3">
+                                            <span>Available Houses</span>
+                                        </div>
+                                        <div class="col-xs-9">
+                                            <span class="badge">25</span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-3">
+                                            <span>Average Rating</span>
+                                        </div> 
+                                        <div class="col-xs-9">
+                                            <span class="badge">4.5</span>
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div> 
+                        </div> 
+                    </div>
+                </div> 
+
+
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="media">
+                            <a class="pull-left" href="#">
+                                <img class="media-object img-circle" src="img/img_avatar2.png" width="80" alt="mellisa_robins">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">Mellisa Robins</h4>
+                                A very interesting place to live. I would like to live there 
+                                again.
+                                <div>
+                                    <span>Rating </span> <span class="badge">5</span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="media">
+                            <a class="pull-left" href="#">
+                                <img class="media-object img-circle" src="img/img_avatar2.png" width="80" alt="mellisa_robins">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">Mellisa Robins</h4>
+                                A very interesting place to live. I would like to live there 
+                                again.
+                                <div>
+                                    <span>Rating </span> <span class="badge">5</span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="media">
+                            <a class="pull-left" href="#">
+                                <img class="media-object img-circle" src="img/img_avatar2.png" width="80" alt="mellisa_robins">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">Mellisa Robins</h4>
+                                A very interesting place to live. I would like to live there 
+                                again.
+                                <div>
+                                    <span>Rating </span> <span class="badge">5</span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="modal fade" id="reserve-modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h3 class="modal-title">Parklands</h3>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-sm-5 col-md-4 col-lg-3"><img  width="300" src="img/subaru.jpg" class="img-rounded img-thumbnail img-responsive" alt="House" /></div>
+                            <div class="col-sm-7 col-md-8 col-lg-9">
+                                <table class="table table-bordered">
+                                    <tr>
+                                        <th>House ID</th>
+                                        <td>25</td>
+                                    </tr>
+                                    <tr>
+                                        <th>No. Of Rooms</th>
+                                        <td>4</td> 
+                                    </tr>
+                                    <tr>
+                                        <th>Monthly Rent </th> 
+                                        <td>Ksh. 5,000</td> 
+                                    </tr>
+                                </table>
+                                <div class="well">After the reservation, a token will automatically be
+                                    generated and downloaded to your computer. The caretaker's contact info, residential
+                                    location and reservation ID are included in the token. Please submit the token to the 
+                                    caretaker within 3 business days to finalize the reservation. 
+                                    Note: You cannot reserve another room until completion of this process. 
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="modal-footer">
+                        <button data-dismiss="modal" class="btn btn-default">Cancel</button>
+                        <button class="btn btn-default">Reserve</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

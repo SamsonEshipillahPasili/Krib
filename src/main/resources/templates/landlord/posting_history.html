@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Krib | Postings</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../css/bootstrap.css" type="text/css" rel="stylesheet" /> 
+        <script src="../js/jquery.js"></script> 
+        <script src="../js/bootstrap.js"></script> 
+    </head>
+    <body>
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="navbar-header">
+
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target="#collapse-links">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#" class="navbar-brand">Krib</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="collapse-links">
+                <ul class="nav navbar-nav">
+                    <li><a href="landlord_dashboard.html">Home</a></li>
+                    <li><a href="my_postings.html?category=all">House Postings</a></li>
+                    <li><a href="my_profile.html">My Profile</a></li>
+                    <li><a href="log_in.html">Sign Out</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="row">
+                <!-- TODO: place the form to the center of the screen --> 
+                <div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Parklands</h3>
+                        </div>
+                        <div class="panel-body">
+                            <table class="table table-hover table-striped">
+                                <tr>
+                                    <th>Sr. No</th>
+                                    <th>House ID</th>
+                                    <th>Monthly Rent</th>
+                                    <th>No. Of Rooms</th>
+                                    <th>Date Posted</th>
+                                    <th>Date Reserved</th>
+                                    <th>Action</th>
+                                </tr> 
+                                <tr>
+                                    <td>1</td>
+                                    <td>R456</td>
+                                    <td>Ksh. 5000</td>
+                                    <td>3</td>
+                                    <td>12/03/2018</td>
+                                    <td>12/03/2018</td> 
+                                    <td><button data-toggle="modal" data-target="#reserve-modal" type="button" class="btn btn-default">Rate</button></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>R456</td>
+                                    <td>Ksh. 3000</td>
+                                    <td>2</td>
+                                    <td>12/03/2018</td>
+                                    <td>12/03/2018</td> 
+                                    <td><button data-toggle="modal" data-target="#reserve-modal" type="button" class="btn btn-default">Rate</button></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>R456</td>
+                                    <td>Ksh. 2000</td>
+                                    <td>1</td>
+                                    <td>12/03/2018</td>
+                                    <td>12/03/2018</td> 
+                                    <td><button data-toggle="modal" data-target="#reserve-modal" type="button" class="btn btn-default">Rate</button></td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>R456</td>
+                                    <td>Ksh. 5000</td>
+                                    <td>5</td>
+                                    <td>12/03/2018</td>
+                                    <td>12/03/2018</td> 
+                                    <td><button data-toggle="modal" data-target="#reserve-modal" type="button" class="btn btn-default">Rate</button></td>
+                                </tr>
+                            </table>
+                        </div> 
+                        <div class="panel-footer">
+                            <span>Krib 2018</span>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+        </div>
+
+        <div class="modal fade" id="reserve-modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h3 class="modal-title">Parklands</h3>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-sm-5 col-md-4 col-lg-3"><img  width="300" src="img/subaru.jpg" class="img-rounded img-thumbnail img-responsive" alt="Tenant Photo" /></div>
+                            <div class="col-sm-7 col-md-8 col-lg-9">
+                                <table class="table table-bordered">
+                                    <tr>
+                                        <th>Tenant ID</th>
+                                        <td>32644882</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Tenant Name</th>
+                                        <td>ESHIPILLAH PASILI SAMSON</td> 
+                                    </tr>
+                                    <tr>
+                                        <th>Choose Rating </th> 
+                                        <td>
+                                            <select class="form-control">
+                                                <option>-- Select Rating --</option>
+                                                <option>5</option>
+                                                <option>4</option>
+                                                <option>3</option>
+                                                <option>2</option>
+                                                <option>1</option>
+                                            </select>
+                                        </td> 
+                                    </tr>
+                                </table>
+                                <form>
+                                    <div class="form-group">
+                                        <label for="comment">Share your experience with this tenant</label>
+                                        <textarea id="comment" class="form-control"></textarea>
+                                    </div> 
+                                </form> 
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="modal-footer">
+                        <button data-dismiss="modal" class="btn btn-default">Cancel</button>
+                        <button class="btn btn-default">Leave a rating</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  *
- * @author Eshipillah Pasili Samson 
+ * @author Eshipillah Pasili Samson
  */
 @RestController
 public class KribRestController {
-    
+
 }

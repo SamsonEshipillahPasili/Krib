@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class KribApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(KribApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(KribApplication.class, args);
+    }
 }

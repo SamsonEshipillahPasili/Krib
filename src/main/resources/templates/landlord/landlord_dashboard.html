@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Krib | Dashboard</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../css/bootstrap.css" type="text/css" rel="stylesheet" /> 
+        <script src="../js/jquery.js"></script> 
+        <script src="../js/bootstrap.js"></script> 
+        <style>
+            .navbar-default{
+                background-color: #025402
+            }
+
+            .navbar-links{
+                color: #ccc;
+            }
+
+            .navbar-links:hover{
+                color: white;
+            }
+            
+            .well{
+                background: transparent;
+            }
+
+            .available-houses-badge{
+                background-color: #449d44; 
+            }
+
+            .average-rating-badge{
+                background-color: #f0ad4e; 
+            }
+
+            .navbar-default{
+                background-color: #025402
+            }
+            
+            .navbar-links{
+                color: #ccc;
+            }
+            
+            .navbar-links:hover{
+                color: white;
+            }
+
+        </style> 
+    </head>
+    <body>
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target="#collapse-links">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#" class="navbar-brand" style="color: white">Krib</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="collapse-links">
+                <ul class="nav navbar-nav">
+                    <li><a style="color: white" href="#">Home</a></li>
+                    <li><a href="my_postings.html?category=all"><span class="navbar-links">House Postings</span></a></li>
+                    <li><a href="my_profile.html"><span class="navbar-links">My Profile</span></a></li>
+                    <li><a href="log_in.html"><span class="navbar-links">Sign Out</span></a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container" style="margin-top: 55px">
+            <div class="row">
+                <div class="col-lg-9">
+                    <div class="row">
+                        <div>
+                            <div class="panel panel-success">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Add Apartment</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="panel panel-success">
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <div class="col-sm-5 col-md-4 col-lg-3">
+                                                    <div class="form-group">
+                                                        <input type="file" style="width:150px; height: 150px;" class="form-control" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-7 col-md-8 col-lg-9">
+                                                    <div class="form-group">
+                                                        <input type="text" placeholder="Specify Apartment Name" class="form-control" />
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <textarea placeholder="Enter a catchy description for the apartment to attract clients!" class="form-control"></textarea>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-4">
+                                                            <div class="form-group">
+                                                                <select class="form-control">
+                                                                    <option>-- City --</option>
+                                                                    <option>Nairobi</option>
+                                                                    <option>Mombasa</option>
+                                                                    <option>Kisumu</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-4">
+                                                            <div class="form-group">
+                                                                <select class="form-control">
+                                                                    <option>-- Estate --</option>
+                                                                    <option>Githurai</option>
+                                                                    <option>Kariobangi</option>
+                                                                    <option>Parklands</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-4">
+                                                            <div class="form-group">
+                                                                <select class="form-control">
+                                                                    <option>-- Sub-Estate</option>
+                                                                    <option>Githurai 1</option>
+                                                                    <option>Kariobangi 1</option>
+                                                                    <option>Parklands 1</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                        </div>
+                                        <div class="panel-footer">
+                                            <button class="btn btn-danger" type="button"><span class="glyphicon glyphicon-plus"></span> Add Apartment</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+
+                    <div class='row'>
+                        <div class="panel panel-success">
+                            <div class="panel-heading">
+                                <h2 class="panel-title">My Apartments</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div>
+                            <div class="panel panel-success">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Park Lands</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="panel panel-success">
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <div class="col-sm-5 col-md-4 col-lg-3"><img  width="300" src="../img/subaru.jpg" class="img-rounded img-thumbnail img-responsive" alt="House" /></div>
+                                                <div class="col-sm-7 col-md-8 col-lg-9">
+                                                    <div class="well">Parklands is a scenic beauty, with all that is needed to create a captivating living
+                                                        experience, look no further! 
+                                                    </div> 
+                                                    <div class="row">
+                                                        <div class="col-xs-3">
+                                                            <span>Available Houses</span>
+                                                        </div>
+                                                        <div class="col-xs-9">
+                                                            <span class="badge available-houses-badge">25</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-xs-3">
+                                                            <span>Average Rating</span>
+                                                        </div> 
+                                                        <div class="col-xs-9">
+                                                            <span class="badge average-rating-badge">4.5</span>
+                                                        </div> 
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                        </div>
+                                        <div class="panel-footer">
+
+                                            <button class="btn btn-danger" type="button" data-toggle="modal" data-target="#post-house-modal">
+                                                <span class="glyphicon glyphicon-home"></span> Post a House</button>
+                                            <a href="my_postings.html" class="btn btn-success">
+                                                <span class="glyphicon glyphicon-cog"></span> Manage Postings</a>
+                                            <a href="posting_history.html" class="btn btn-primary">
+                                                <span class="glyphicon glyphicon-time"></span> Posting History</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+
+                </div>
+                <div class="col-lg-3">
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="post-house-modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h3 class="modal-title text-success">Parklands</h3>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <table class="table table-bordered">
+                                <tr>
+                                    <th class="text-success">House ID</th>
+                                    <td class="form-group">
+                                        <input type="text" class="form-control" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-success">No. Of Rooms</th>
+                                    <td class="form-group">
+                                        <select class="form-control">
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-success">Monthly Rent </th> 
+                                    <td class="form-group">
+                                        <input type="number" class="form-control" />
+                                    </td> 
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button data-dismiss="modal" class="btn btn-danger">Cancel</button>
+                        <button class="btn btn-primary">Post</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
